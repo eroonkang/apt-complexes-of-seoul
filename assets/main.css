@@ -1,0 +1,151 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  /* animation-name: backgroundColorPalette;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate; */
+}
+@keyframes backgroundColorPalette {
+	0%   { background: #ee6055; }
+	25%  { background: #60d394; }
+	50%  { background: #aaf683; }
+	75%  { background: #ffd97d; }
+	100% { background: #ff9b85; }
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial Unicode MS", Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+/* type */
+.t-l {
+  font-size: calc(100/1024*24vw);
+}
+.t-m {
+  font-size: calc(100/1024*16vw);
+}
+.t-s {
+  font-size: calc(100/1024*8vw);
+  font-family: "Batang", serif;
+}
+.t-c {
+  text-align: center;
+}
+.p-m {
+  padding: 2vw;
+}
+.pb-s {
+ padding-bottom: 1vw; 
+}
+.t-c span {
+  display:inline-block;
+  margin-right: 0.5vw;
+  -webkit-transform: scale(0.95,1);
+}
+
+/* layout */
+.wrapper {
+  display: flex;
+}
+.apt {
+  position: relative;
+  /* background-color: yellow; */
+   width: 33vw; 
+  height: 100vh;
+}
+.header {
+  /*text-align: center;*/
+}
+.story {
+  position: absolute;
+  padding: 0 2vw;
+  bottom: 4.5vw;
+  word-break: keep-all;
+  letter-spacing: -0.01em;
+  width: inherit;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.text {
+  margin-top: 1vw;
+}
+.footer {
+  position: absolute;
+  padding: 0 2vw;
+  width: 33vw; 
+  bottom: 1vw;
+  display: flex;
+  justify-content: space-between;
+}
+.footer > div {
+  /* width: 50%; */
+}
+.progress {
+  width: 100vw;
+  height: 20px;
+  margin: 0 2vw;
+  border-top: 1px solid #000;
+  position: absolute;
+  bottom: 1.75vw;
+  animation-name: grow;
+  animation-duration: 45s;
+  animation-timing-function: linear;
+}
+@keyframes grow {
+  from  { 
+    width: calc(100% - 4vw); 
+  }
+  to    { 
+    width: 0; 
+  }
+}
