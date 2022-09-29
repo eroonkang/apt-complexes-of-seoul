@@ -23,7 +23,7 @@ function print(data, rows) {
     html += '      <div class="text story-' + i + ' t-m"></div>';
     html += '    </div>';
     html += '    <div class="footer t-s">';
-    html += '      <div>' + data[row]['address_gu'] + ' ' + data[row]['address_street'] + ', ' + data[row]['units'] + '세대, ' + data[row]['year_approval'] + '년</div>';
+    html += '      <div>' + data[row]['address_gu'] + ' ' + data[row]['address_dong'] + ' ' + data[row]['address_street'] + ', ' + data[row]['units'] + '세대, ' + data[row]['year_approval'] + '년</div>';
     html += '    </div>';
     html += '    <div class="progress"></div>';
     html += '  </div>';
