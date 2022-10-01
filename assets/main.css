@@ -103,7 +103,7 @@ body {
   height: 100vh;
 }
 .header {
-  /*text-align: center;*/
+  /* text-transform: uppercase; */
 }
 .story {
   position: absolute;
@@ -126,6 +126,7 @@ body {
   bottom: 1vw;
   display: flex;
   justify-content: space-between;
+  /* text-transform: uppercase; */
 }
 .footer > div {
   /* width: 50%; */
