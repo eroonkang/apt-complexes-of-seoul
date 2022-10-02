@@ -1,7 +1,7 @@
 jQuery(function() {
 
 d3.tsv("data.tsv", function (d) {
-  console.log(d.length);
+  console.log(d);
   var rows = getRandom(1, d.length - 1, 3);
   print(d, rows);
 
@@ -28,14 +28,17 @@ function print(data, rows) {
     html += '      <div class="text story-' + i + ' t-m"></div>';
     html += '    </div>';
     html += '    <div class="footer t-s">';
-    html += '      <div>' + data[row]['address_gu'] + ' ' + data[row]['address_dong'] + ' ' + data[row]['address_street'] + ', ' + data[row]['units'] + '세대, ' + data[row]['year_approval'] + '년</div>';
+    html += '      <div>' + data[row]['address_gu'] + ' ' + data[row]['address_dong'] + ' ' + data[row]['address_street'] + ', ' + data[row]['units'] + '세대, ' + data[row]['year_approval'] + '년 준공</div>';
     html += '    </div>';
     html += '    <div class="progress"></div>';
     html += '  </div>';
     $('.wrapper').append(html);
 
     // append words into .story div
-    words[i] = data[row]['result'].split(/\s+/);
+    var text = data[row]['result'];
+    text = text.replace(/\\"/g, '"');
+    text = text.replace(/\\'/g, "'");
+    words[i] = text.split(/\s+/);
     var spans = '<span>' + words[i].join(' </span><span>') + '</span>';
 
     // determine right offset time
